@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ladashopq
@@ -22,6 +23,68 @@ namespace ladashopq
         public WindowAuth()
         {
             InitializeComponent();
+
+            AppFrame.frameAuth = AuthFrame;
+
+        }
+
+        private void BtnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var currentUser = AppData.db.Users.FirstOrDefault((User) => User.Login == TBLogin.Text && User.Password == TBPassword.Text);
+
+                if (currentUser == null)
+                {
+                    MessageBox.Show("Такого пользователя нет!", "Ошибка авторизации");
+                }
+                else
+                {
+                    if (currentUser.Login.Equals(TBLogin.Text) && currentUser.Password.Equals(TBPassword.Text))
+                    {
+                        if (currentUser.RoleID == 1)
+                        {
+                            AdminWindow admin = new AdminWindow(); //currentUser.userID
+                            admin.Show();
+                        }
+                        else
+                        {
+                            UserWindow userWindow = new UserWindow();
+                            userWindow.Show();
+                        }
+                        Window.GetWindow(this).Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректные логин и пароль", "Ошибка авторизации");
+                    }
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка " + ex.Message.ToString());
+            }
+
+        }
+
+        
+
+        private void TBLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void AuthFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
+        }
+
+        private void BtnSignInGuest_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
+
