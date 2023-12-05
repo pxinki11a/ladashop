@@ -19,7 +19,7 @@ namespace ladashopq
 
     internal class AppData
     {
-        public static autoshopdbEntities db = new autoshopdbEntities();
+        public static autoshopdbEntities1 db = new autoshopdbEntities1();
 
         public static Frame frameAuth;
 

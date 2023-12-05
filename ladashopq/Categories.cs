@@ -17,13 +17,13 @@ namespace ladashopq
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Categories()
         {
-            this.Tovar = new HashSet<Tovar>();
+            this.Tovars = new HashSet<Tovars>();
         }
     
         public int ID { get; set; }
         public string CategoryName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tovar> Tovar { get; set; }
+        public virtual ICollection<Tovars> Tovars { get; set; }
     }
 }

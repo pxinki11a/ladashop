@@ -12,7 +12,7 @@ namespace ladashopq
     using System;
     using System.Collections.Generic;
     
-    public partial class Tovar
+    public partial class Tovars
     {
         public string Article { get; set; }
         public int CategoryID { get; set; }

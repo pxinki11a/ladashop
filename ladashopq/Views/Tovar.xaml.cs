@@ -30,7 +30,7 @@ namespace ladashopq
         }
         public void Update()
         {
-            var content = AppData.db.Tovar.ToList();
+            var content = AppData.db.Tovars.ToList();
             LVMain.ItemsSource = content;
         }
     }
