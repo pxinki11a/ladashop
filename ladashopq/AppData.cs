@@ -14,7 +14,8 @@ namespace ladashopq
         Providers,
         Role,
         Tovar,
-        Users
+        Users,
+        Models
     }
 
     internal class AppData
