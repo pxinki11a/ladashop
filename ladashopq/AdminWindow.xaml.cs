@@ -19,6 +19,7 @@ namespace ladashopq
     /// </summary>
     public partial class AdminWindow : Window
     {
+
         public TableName currentTable;
         public AdminWindow()
         {
@@ -61,7 +62,30 @@ namespace ladashopq
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
+            switch (currentTable)
+            {
+                case TableName.Categories:
+                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Categories));
+                    break;
+                case TableName.Models:
+                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Models));
+                    break;
+                case TableName.Providers:
+                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Providers));
+                    break;
+                case TableName.Role:
+                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Role));
+                    break;        
+                case TableName.Users:
+                    MainFrame.Navigate(new Views.AddEditUserPage());
+                    break;
+                
+                case TableName.Tovar:
 
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

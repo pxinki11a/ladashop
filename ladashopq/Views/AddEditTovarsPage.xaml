@@ -6,53 +6,59 @@
       xmlns:local="clr-namespace:ladashopq.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddEditTovarsPage">
+      Title="AddEditTovarsPage" Background="AntiqueWhite">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image x:Name="TechImage" Height="200" Width="200" Source="{Binding Img}"/>
-            <Button Grid.ColumnSpan="1" x:Name="BtnAddImage" Click="BtnAddImage_Click" Content="Добавить изображение" Width="189"/>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Название"/>
+                        <TextBox x:Name="TBProductName"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Артикул"/>
+                        <TextBox x:Name="TBArticle"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Описание"/>
+                        <TextBox x:Name="TBDescription"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Категория"/>
+                        <ComboBox Name="TBCategory" SelectedItem="Выберите категорию"/>
+
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Модель"/>
+                        <ComboBox Name="TBModel" SelectedItem="Выберите модель"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Поставщик"/>
+                        <ComboBox Name="TBProvider" SelectedItem="Выберите поставщика">
+
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Количество"/>
+                        <TextBox Name="TBCount"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock Text="Цена"/>
+                        <TextBox Name="TBPrice"/>
+                    </StackPanel>
+                    <Button Margin="10" Content="Сохранить" Click="BtnSave_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" >
+                    <Border Margin="5" Width="250" Height="280" BorderBrush="{StaticResource ColorAccent}">
+                        <Image Name="ImagePFP" Source="/Resources/zaglushka.png"/>
+                    </Border>
+                    <Button Content="Добавить" Click="BtnImage_Click"/>
+                    <Button Grid.ColumnSpan="2" HorizontalAlignment="Right" Grid.Row="1" x:Name="BtnBack" Click="BtnBack_Click" Content="Назад"/>
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="115" Text="Название"/>
-                <TextBox Text="{Binding ProductName}"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="120" Text="Категория"/>
-                <ComboBox Width="150" SelectedItem="{Binding CategoryID}" Name="ComboTech" DisplayMemberPath="Type"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="115" Text="Модель"/>
-                <TextBox Text="{Binding ModeID}"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="115" Text="Поставщик"/>
-                <TextBox Text="{Binding ProviderID}"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="115" Text="Описание"/>
-                <TextBox Text="{Binding Description}"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="115" Text="Количество"/>
-                <TextBox Text="{Binding Count}"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="115" Text="Цена"/>
-                <TextBox Text="{Binding Price}"/>
-            </StackPanel>
-        </StackPanel>
-        <Grid Grid.ColumnSpan="2" Grid.Row="1" Background="{StaticResource ColorAccent}"/>
-        <Button Grid.ColumnSpan="2" HorizontalAlignment="Left" Grid.Row="1" x:Name="BtnSave" Click="BtnSave_Click" Content="Сохранить"/>
-        <Button Grid.ColumnSpan="2" HorizontalAlignment="Right" Grid.Row="1" x:Name="BtnBack" Click="BtnBack_Click" Content="Назад"/>
     </Grid>
 </Page>

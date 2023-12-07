@@ -10,12 +10,12 @@ namespace ladashopq
 
     public enum TableName
     {
-        Categories,
-        Providers,
-        Role,
         Tovar,
+        Categories,
+        Role,
+        Models,
         Users,
-        Models
+        Providers
     }
 
     internal class AppData

@@ -1,5 +1,4 @@
-﻿using ladashopq.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ladashopq
+namespace ladashopq.Views
 {
     /// <summary>
-    /// Логика взаимодействия для AddEditShortPage.xaml
+    /// Логика взаимодействия для AddEditShortPages.xaml
     /// </summary>
-    public partial class AddEditShortPage : Page
+    public partial class AddEditShortPages : Page
     {
         public TableName currentTable;
         public string itemName;
@@ -28,7 +27,7 @@ namespace ladashopq
         public Models models;
         public Providers providers;
         public bool addOrEditFlag = false;
-        public AddEditShortPage(TableName tn)
+        public AddEditShortPages(TableName tn)
         {
             InitializeComponent();
             this.WindowTitle = "Добавление";
@@ -58,7 +57,7 @@ namespace ladashopq
             }
         }
 
-        public AddEditShortPage(TableName tn, Categories ctg = null, Role rl = null, Models mdl = null, Providers prvd = null)
+        public AddEditShortPages(TableName tn, Categories ctg = null, Role rl = null, Models mdl = null, Providers prvd = null)
         {
             this.currentTable = tn;
             addOrEditFlag = false;
@@ -87,8 +86,8 @@ namespace ladashopq
                     TBShortName.Text = models.ModelName;
                     break;
                 case TableName.Providers:
-                    this.WindowTitle = "Редактирование состояний книг";
-                    TBName.Text = "Состояние:";
+                    this.WindowTitle = "Редактирование поставщиков";
+                    TBName.Text = "Поставщик:";
                     TBShortName.Text = providers.Provider;
                     break;
                 default:
@@ -124,9 +123,9 @@ namespace ladashopq
                         AppData.db.Models.Add(models);
                         break;
                     case TableName.Providers:
-                        Providers providers = new Providers() 
-                        { 
-                            Provider = TBShortName.Text, 
+                        Providers providers = new Providers()
+                        {
+                            Provider = TBShortName.Text,
                         };
                         AppData.db.Providers.Add(providers);
                         break;
@@ -162,4 +161,3 @@ namespace ladashopq
         }
     }
 }
-

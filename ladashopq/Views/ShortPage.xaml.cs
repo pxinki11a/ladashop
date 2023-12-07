@@ -68,19 +68,19 @@ namespace ladashopq.Views
             {
                 case TableName.Categories:
                     var currentCategories = button.DataContext as Categories;
-                    NavigationService.Navigate(new AddEditShortPage(currentTable, currentCategories));
+                    NavigationService.Navigate(new AddEditShortPages(currentTable, currentCategories));
                     break;
                 case TableName.Role:
                     var currentRole = button.DataContext as Role;
-                    NavigationService.Navigate(new AddEditShortPage(currentTable, null, currentRole));
+                    NavigationService.Navigate(new AddEditShortPages(currentTable, null, currentRole));
                     break;
                 case TableName.Models:
                     var currentModels = button.DataContext as Models;
-                    NavigationService.Navigate(new AddEditShortPage(currentTable, null, null, currentModels));
+                    NavigationService.Navigate(new AddEditShortPages(currentTable, null, null, currentModels));
                     break;
                 case TableName.Providers:
                     var currentProviders = button.DataContext as Providers;
-                    NavigationService.Navigate(new AddEditShortPage(currentTable, null, null, null, currentProviders));
+                    NavigationService.Navigate(new AddEditShortPages(currentTable, null, null, null, currentProviders));
                     break;
                 default:
                     break;
