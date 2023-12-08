@@ -11,6 +11,7 @@ namespace ladashopq
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     
     public partial class Tovars
     {
@@ -27,5 +28,23 @@ namespace ladashopq
         public virtual Categories Categories { get; set; }
         public virtual Models Models { get; set; }
         public virtual Providers Providers { get; set; }
+
+        public string correctimage
+        {
+            get
+            {
+                string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Resources\");
+                if (String.IsNullOrEmpty(Img) || String.IsNullOrWhiteSpace(Img) || Img == null)
+                {
+                    return path + "zaglushka.png";
+                }
+                else
+                {
+                    return path + Img;
+                }
+            }
+        }
+
+
     }
 }

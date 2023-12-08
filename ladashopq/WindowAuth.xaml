@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="Авторизация" Height="450" Width="800" Background="AntiqueWhite" >
-    <Grid Background="AntiqueWhite">
+        Title="Авторизация" Height="450" Width="800" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#D5CFE1">
         <TextBlock Text="Авторизация" TextAlignment="Center" VerticalAlignment="Top" FontSize="42" Margin="10,64,-10,0"/>
     <StackPanel VerticalAlignment="Center"
                     

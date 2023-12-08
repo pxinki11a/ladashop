@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="UserWindow" Height="450" Width="800" Background="AntiqueWhite">
+        Title="UserWindow" Height="450" Width="1080" Background="# " WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid Margin="0,0,0,-48" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,18 +23,18 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="nameFilter" Height="35" Margin="604,46,21,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock Grid.Row="0" Text="Поиск:" FontFamily="Gabriola" FontSize="26" HorizontalAlignment="Left" Margin="529,43,0,21" Width="63"/>
+        <TextBox x:Name="Searchq" Height="35" Margin="434,35,172,0" TextWrapping="Wrap" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" TextChanged="Search"/>
+        <TextBlock Grid.Row="0" Text="Поиск:" FontFamily="Gabriola" FontSize="26" HorizontalAlignment="Right" Margin="0,30,347,34" Width="63"/>
         <Image  Grid.Row="0" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="114,33,0,41" Width="211"/>
-        <ComboBox Name="Сортировка" Margin="743,41,120,15" IsEditable="True" IsReadOnly="True" Text="Сортировка" FontSize="26" FontFamily="Gabriola">
+        <ComboBox Name="Сортировка" Margin="0,22,5,0" IsEditable="True" IsReadOnly="True" Text="Сортировать по" FontSize="26" FontFamily="Gabriola" Width="145" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top">
 
             <ComboBoxItem Content="qwe"/>
 
         </ComboBox>
 
 
-        <ComboBox Name="Фильтрация" Margin="589,40,268,13" IsReadOnly="True" IsEditable="True" Text="Фильтрация" FontFamily="Gabriola" FontSize="26"/>
+        <ComboBox Name="Фильтрация" Margin="0,55,6,0" IsReadOnly="True" IsEditable="True" HorizontalAlignment="Right" Text="Фильтрация" FontFamily="Gabriola" FontSize="26" VerticalAlignment="Top" Width="142" Height="25"/>
         <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,2,0"/>
     </Grid>
 </Window>

@@ -32,5 +32,10 @@ namespace ladashopq
         {
 
         }
+
+        private void Search(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

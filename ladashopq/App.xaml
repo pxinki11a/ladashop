@@ -4,11 +4,11 @@
              xmlns:local="clr-namespace:ladashopq"
              StartupUri="WindowAuth.xaml">
     <Application.Resources>
-        <SolidColorBrush x:Key="ColorAccent" Color="AntiqueWhite"/>
+        <SolidColorBrush x:Key="ColorAccent" Color="#EDDFEF"/>
         <SolidColorBrush x:Key="ColorPrimary" Color="DarkGray"/>
         <SolidColorBrush x:Key="ColorNotWhite" Color="#fdf5e6"/>
-        <SolidColorBrush x:Key="ColorFont" Color="Black"/>
-        <SolidColorBrush x:Key="AnotherColor" Color="Coral"/>
+        <SolidColorBrush x:Key="ColorFont" Color="#464655"/>
+        <SolidColorBrush x:Key="AnotherColor" Color="#94958B"/>
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
