@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="UserWindow" Height="450" Width="1080" Background="# " WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+        Title="UserWindow" Height="450" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid Margin="0,0,0,-48" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,7 +34,12 @@
         </ComboBox>
 
 
-        <ComboBox Name="Фильтрация" Margin="0,55,6,0" IsReadOnly="True" IsEditable="True" HorizontalAlignment="Right" Text="Фильтрация" FontFamily="Gabriola" FontSize="26" VerticalAlignment="Top" Width="142" Height="25"/>
-        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,2,0"/>
+        <ComboBox Background="#FFCC6600" Name="Фильтрация" HorizontalAlignment="Left" Margin="931,53,0,0" Grid.Row="0" VerticalAlignment="Top" Width="143" Text="Фильтрация" BorderBrush="#FFA73939" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="23">
+            <ComboBoxItem Content="Автохимия"/>
+            <ComboBoxItem Content="Двигатель"/>
+            <ComboBoxItem Content="Жидкости"/>
+            
+            <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,2,0"/>
+        </ComboBox>
     </Grid>
 </Window>

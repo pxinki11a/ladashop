@@ -37,5 +37,17 @@ namespace ladashopq
         {
 
         }
+
+        private void Фильтрация_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            WindowAuth user = new WindowAuth();
+            user.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }
