@@ -29,9 +29,9 @@ namespace ladashopq
         public virtual Models Models { get; set; }
         public virtual Providers Providers { get; set; }
 
-        public string correctimage
+        public string Autoimage
         {
-            get
+            get 
             {
                 string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Resources\");
                 if (String.IsNullOrEmpty(Img) || String.IsNullOrWhiteSpace(Img) || Img == null)

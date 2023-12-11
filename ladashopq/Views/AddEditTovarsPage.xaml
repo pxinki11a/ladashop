@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ladashopq.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddEditTovarsPage" Background="AntiqueWhite">
+      Title="AddEditTovarsPage" Background="#D5CFE1">
 
     <Grid>
 

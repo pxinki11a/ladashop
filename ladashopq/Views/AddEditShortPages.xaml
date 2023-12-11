@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ladashopq.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddEditShortPages" Background="AntiqueWhite">
+      Title="AddEditShortPages" Background="#D5CFE1">
 
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">

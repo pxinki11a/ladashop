@@ -23,23 +23,27 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="Searchq" Height="35" Margin="434,35,172,0" TextWrapping="Wrap" Text="" HorizontalAlignment="Right" VerticalAlignment="Top" TextChanged="Search"/>
-        <TextBlock Grid.Row="0" Text="Поиск:" FontFamily="Gabriola" FontSize="26" HorizontalAlignment="Right" Margin="0,30,347,34" Width="63"/>
+        <TextBox x:Name="Searchq" Height="35" Margin="400,0,0,0" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="Search"/>
+        <TextBlock Grid.Row="0" Text="Поиск:" FontFamily="Gabriola" FontSize="26" HorizontalAlignment="Center" Margin="0,30,347,34" Width="63"/>
         <Image  Grid.Row="0" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="114,33,0,41" Width="211"/>
-        <ComboBox Name="Сортировка" Margin="0,22,5,0" IsEditable="True" IsReadOnly="True" Text="Сортировать по" FontSize="26" FontFamily="Gabriola" Width="145" HorizontalAlignment="Right" Height="26" VerticalAlignment="Top">
+        <ComboBox Name="Сортировка" Margin="600,0,0,0" IsEditable="True" IsReadOnly="True" Text="Сортировать по" FontSize="26" FontFamily="Gabriola" Width="145" HorizontalAlignment="Left" Height="26">
 
-            <ComboBoxItem Content="qwe"/>
-
+            <ComboBoxItem Content="По алфавиту"/>
+            <ComboBoxItem Content="Сначала дешевые"/>
+            <ComboBoxItem Content="Сначала дорогие"/>
         </ComboBox>
 
+        <Button Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Left" Margin="910,32,0,32" Height="35" Width="155" Click="Button_Click"/>
 
-        <ComboBox Background="#FFCC6600" Name="Фильтрация" HorizontalAlignment="Left" Margin="931,53,0,0" Grid.Row="0" VerticalAlignment="Top" Width="143" Text="Фильтрация" BorderBrush="#FFA73939" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="23">
+        <ComboBox Background="#FFCC6600" Name="Фильтрация" HorizontalAlignment="Left" Margin="750,0,0,0" Width="145" Text="Фильтрация" BorderBrush="#FFA73939" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="26">
             <ComboBoxItem Content="Автохимия"/>
-            <ComboBoxItem Content="Двигатель"/>
-            <ComboBoxItem Content="Жидкости"/>
+            <ComboBoxItem Content="Масла, тех.жидкости"/>
+            <ComboBoxItem Content="Детали кузова"/>
+            <ComboBoxItem Content="Ходовая часть"/>
+            <ComboBoxItem Content="Электрика"/>
             
-            <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,2,0"/>
         </ComboBox>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,2,0"/>
     </Grid>
 </Window>

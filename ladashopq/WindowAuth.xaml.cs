@@ -32,7 +32,7 @@ namespace ladashopq
         {
             try
             {
-                var currentUser = AppData.db.Users.FirstOrDefault((User) => User.Login == TBLogin.Text && User.Password == TBPassword.Text);
+                var currentUser = AppData.db.Users.FirstOrDefault((User) => User.Login == TBLogin.Text && User.Password == TBPassword.Password);
 
                 if (currentUser == null)
                 {
@@ -40,7 +40,7 @@ namespace ladashopq
                 }
                 else
                 {
-                    if (currentUser.Login.Equals(TBLogin.Text) && currentUser.Password.Equals(TBPassword.Text))
+                    if (currentUser.Login.Equals(TBLogin.Text) && currentUser.Password.Equals(TBPassword.Password))
                     {
                         if (currentUser.RoleID == 1)
                         {
@@ -83,7 +83,9 @@ namespace ladashopq
 
         private void BtnSignInGuest_Click(object sender, RoutedEventArgs e)
         {
-
+            UserWindow user = new UserWindow();
+            user.Show();
+            Window.GetWindow(this).Close();
         }
     }
 }

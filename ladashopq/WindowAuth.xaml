@@ -15,7 +15,7 @@
         <TextBlock Text="Логин" />
         <TextBox Name="TBLogin" Width="199"/>
         <TextBlock Text="Пароль"/>
-        <TextBox Name="TBPassword" Width="199"/>
+        <PasswordBox Name="TBPassword" Width="199"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Click="BtnSignIn_Click"
                         Content="Войти"/>

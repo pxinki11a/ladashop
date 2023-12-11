@@ -14,8 +14,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        
-        <ListView Grid.Row="1" Name="LVMain" SelectedIndex="-1">
+
+        <ListView Grid.Row="1" Name="LVMain" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black">
@@ -24,43 +24,51 @@
                             <Border Background="#b3b2bd" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,3,3">
                                 <StackPanel Orientation="Horizontal" Width="900" Height="200">
                                     <StackPanel Orientation="Vertical">
-                                        <TextBlock Width="100" Height="100" Text="{Binding Img}"  TextAlignment="Center"/>
-                                
-                                <TextBlock Width="200" FontSize="20" Margin="0,55,0,0" FontWeight="Bold" Text="{Binding Article}" TextAlignment="Center"/>
-                                    </StackPanel>
-
-                                    <StackPanel>
                                         <TextBlock FontWeight="Bold" FontSize="20" Text="{Binding ProductName}" TextAlignment="left"/>
-                                    <Border Width="300" Height="150" HorizontalAlignment="Center" Background="#d3d3d9" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,8,8">
-                                        <StackPanel Orientation="Vertical">
-                                           
-                                            <TextBlock TextAlignment="Left" Width="100" FontSize="15" Text="Описание:" />
-                                            <TextBlock FontSize="13" Text="{Binding Description}" TextAlignment="Left" Margin="10,0,0,15" TextWrapping="Wrap"/>
-                                       
+                                        <TextBlock Width="200" FontSize="20" FontWeight="Bold" Text="{Binding Article}" TextAlignment="Center"/>
+                                        <Border Margin="5 10 0 0" Width="100" Height="100" BorderBrush="Black" BorderThickness="2" CornerRadius="8,8,8,8">
+                                            <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="100" Source="{Binding Autoimage}" Name="Autoimage"/>
+                                        </Border>
+
+
                                     </StackPanel>
-                                    </Border>
+
+                                    <StackPanel>
+                                        
+                                        <Border Width="300" Height="150" Margin="0,20,0,0"  HorizontalAlignment="Center" Background="#d3d3d9" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,8,8">
+                                            <StackPanel Orientation="Vertical">
+
+                                                <TextBlock TextAlignment="Left" Width="100" FontSize="15" Text="Описание:" />
+                                                <TextBlock FontSize="13" Text="{Binding Description}" TextAlignment="Left" Margin="10,0,0,15" TextWrapping="Wrap"/>
+
+                                            </StackPanel>
+                                        </Border>
                                     </StackPanel>
                                     <StackPanel>
-                                        <TextBlock HorizontalAlignment="Center" Width="100" Text="Категории:" />
-                                        <TextBlock Text="{Binding Categories.CategoryName}" TextAlignment="Center"
-                                           />
-                                        <TextBlock HorizontalAlignment="Center" Width="100" Text="Модель:" />
-                                <TextBlock Text="{Binding Models.ModelName}"  TextAlignment="Center"/>
+                                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Width="100" Text="Категории:" />
 
-                                        <TextBlock HorizontalAlignment="Center" Width="100" Text="Поставщик:" />
+                                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Width="100" Text="Модель:" />
+
+
+                                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Width="100" Text="Поставщик:" />
+                                        <TextBlock TextAlignment="Center" Width="100" FontSize="15" Text="Цена:" />
+                                        <TextBlock TextAlignment="Center" Width="100" FontSize="15" Text="В наличии:" />
+                                    </StackPanel>
+
+
+
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Categories.CategoryName}" TextAlignment="Right"/>
+                                        <TextBlock Text="{Binding Models.ModelName}"  TextAlignment="Center"/>
                                         <TextBlock Text="{Binding Providers.Provider}" TextAlignment="Center" />
+
+
+                                        <!--<TextBlock Text="{Binding Price}"   TextAlignment="Center" />-->
+                                        <TextBlock> <Run Text="{Binding Price}"/> <Run Text="Рублей"/></TextBlock>
+                                        <TextBlock><Run Text="{Binding Count}"/> <Run Text="Шт."/></TextBlock>
                                     </StackPanel>
 
-
-
-                                    <StackPanel>
-                                        <TextBlock TextAlignment="Left" Width="100" FontSize="15" Text="Цена:" />
-                                        <TextBlock Text="{Binding Price}" TextAlignment="Center" />
-                                        <TextBlock TextAlignment="Left" Width="100" FontSize="15" Text="Количество:" />
-                                <TextBlock Text="{Binding Count}"  TextAlignment="Center"/>
                                 </StackPanel>
-
-                            </StackPanel>
                             </Border>
                         </Grid>
                     </Border>
