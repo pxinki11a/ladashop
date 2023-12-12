@@ -27,7 +27,7 @@ namespace ladashopq.Views
     {
         private byte[] _mainImageData = null;
         public string img = null;
-        public string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Images\");
+        public string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Resources\");
         public string selectefFileName;
         public string extension = "";
         public Tovars currentTovar;
@@ -35,7 +35,7 @@ namespace ladashopq.Views
         public AddEditTovarsPage()
         {
             InitializeComponent();
-
+            this.WindowTitle = "Добавление товара";
             var category = AppData.db.Categories.Select(r => r.CategoryName).ToList();
             TBCategory.ItemsSource = category;
             var model = AppData.db.Models.Select(r => r.ModelName).ToList();
@@ -51,7 +51,7 @@ namespace ladashopq.Views
             currentTovar = ct;
 
             TBProductName.Text = currentTovar.ProductName;
-            TBArticle.Text = currentTovar.Article;
+            TBArticle.Text = Convert.ToString(currentTovar.Article);
             TBDescription.Text = currentTovar.Description;
             TBCategory.SelectedItem = currentTovar.Categories.CategoryName;
             TBModel.SelectedItem = currentTovar.Models.ModelName;
@@ -59,6 +59,7 @@ namespace ladashopq.Views
             TBCount.Text = Convert.ToString(currentTovar.Count);
             TBPrice.Text = Convert.ToString(currentTovar.Price);
 
+            this.WindowTitle = "Добавление товара";
             var category = AppData.db.Categories.Select(r => r.CategoryName).ToList();
             TBCategory.ItemsSource = category;
             var model = AppData.db.Models.Select(r => r.ModelName).ToList();
@@ -82,18 +83,7 @@ namespace ladashopq.Views
                 ImagePFP.Source = new ImageSourceConverter()
                     .ConvertFrom(_mainImageData) as ImageSource;
             }
-            if (img != null)
-            {
-                img = TBArticle.Text + extension;
-                int a = 0;
-                while (File.Exists(path + img))
-                {
-                    a++;
-                    img = TBArticle.Text + $" ({a})" + extension;
-                }
-                path += img;
-                File.Copy(selectefFileName, path);
-            }
+            
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
@@ -102,13 +92,32 @@ namespace ladashopq.Views
             var model = AppData.db.Models.Where(a => a.ModelName == TBModel.SelectedItem.ToString()).FirstOrDefault();
             var provider = AppData.db.Providers.Where(a => a.Provider == TBProvider.SelectedItem.ToString()).FirstOrDefault();
 
+            if (img != null)
+            {
+                img = TBArticle.Text + extension;
+                var files = Directory.GetFiles(path);
+                int a = 0;
+                while (File.Exists(path + img))
+                {
+                    a++;
+                    img = TBArticle.Text + $" ({a})" + extension;
+                }
+                path = path + img;
+                File.Copy(selectefFileName, path);
+            }
+            else if (currentTovar.Img != null)
+            {
+                img = currentTovar.Img;
+            }
+
+
             if (currentTovar == null)
             {
 
 
                 Tovars tovar = new Tovars()
                 {
-                    Article = TBArticle.Text,
+                    Article = Int32.Parse(TBArticle.Text),
                     ProductName = TBProductName.Text,
                     Description = TBDescription.Text,
                     CategoryID = category.ID,
@@ -126,7 +135,7 @@ namespace ladashopq.Views
             else
             {
                 currentTovar.Img = img;
-                currentTovar.Article = TBArticle.Text;
+                currentTovar.Article = Int32.Parse(TBArticle.Text);
                 currentTovar.ProductName = TBProductName.Text;
                 currentTovar.Description = TBDescription.Text;
                 currentTovar.CategoryID = category.ID;
@@ -136,7 +145,7 @@ namespace ladashopq.Views
                 MessageBox.Show("Товар успешно обновлен!");
                 currentTovar = null;
             }
-            NavigationService.Navigate(new TovarsPage());
+            NavigationService.Navigate(new TovarsAdmin());
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

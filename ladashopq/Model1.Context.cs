@@ -13,10 +13,10 @@ namespace ladashopq
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class autoshopdbEntities1 : DbContext
+    public partial class autoshopdbEntities2 : DbContext
     {
-        public autoshopdbEntities1()
-            : base("name=autoshopdbEntities1")
+        public autoshopdbEntities2()
+            : base("name=autoshopdbEntities2")
         {
         }
     
@@ -29,8 +29,7 @@ namespace ladashopq
         public virtual DbSet<Models> Models { get; set; }
         public virtual DbSet<Providers> Providers { get; set; }
         public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Tovars> Tovars { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

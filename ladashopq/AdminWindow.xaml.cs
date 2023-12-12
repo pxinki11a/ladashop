@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ladashopq
@@ -24,68 +25,42 @@ namespace ladashopq
         public AdminWindow()
         {
             InitializeComponent();
-            SelectTable.SelectedIndex = 0;
+            AppFrame.frameMain = AdminFrame;
+            AdminFrame.Navigate(new Views.TovarsAdmin());
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            currentTable = (TableName)SelectTable.SelectedIndex;
-            switch (currentTable)
-            {
-                case TableName.Categories:
-                    MainFrame.Navigate(new Views.ShortPage(TableName.Categories));
-                    break;
-                case TableName.Role:
-                    MainFrame.Navigate(new Views.ShortPage(TableName.Role));
-                    break;
-                case TableName.Models:
-                    _ = MainFrame.Navigate(new Views.ShortPage(TableName.Models));
-                    break;
-                case TableName.Providers:
-                    MainFrame.Navigate(new Views.ShortPage(TableName.Providers));
-                    break;
-                case TableName.Users:
-                    MainFrame.Navigate(new Views.UsersPage());
-                    break;
-                case TableName.Tovar:
-                    MainFrame.Navigate(new Views.TovarsPage());
-                    break;
-                default:
-                    break;
-            }
-        }
 
-        private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
 
-        }
+
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            switch (currentTable)
-            {
-                case TableName.Categories:
-                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Categories));
-                    break;
-                case TableName.Models:
-                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Models));
-                    break;
-                case TableName.Providers:
-                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Providers));
-                    break;
-                case TableName.Role:
-                    MainFrame.Navigate(new Views.AddEditShortPages(TableName.Role));
-                    break;        
-                case TableName.Users:
-                    MainFrame.Navigate(new Views.AddEditUserPage());
-                    break;
-                
-                case TableName.Tovar:
 
-                    break;
-                default:
-                    break;
+            AdminFrame.Navigate(new Views.AddEditTovarsPage());
+
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены, что хотите выйти?", "Уведомление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                WindowAuth user = new WindowAuth();
+                user.Show();
+                Window.GetWindow(this).Close();
             }
+        }
+
+        private void AdminFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }
+
+
+
+
+
+
+
+

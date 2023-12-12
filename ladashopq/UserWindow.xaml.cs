@@ -28,10 +28,7 @@ namespace ladashopq
             MainFrame.Navigate(new Tovar());
         }
 
-        private void MainFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-
-        }
+       
 
         private void Search(object sender, TextChangedEventArgs e)
         {
@@ -43,11 +40,22 @@ namespace ladashopq
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-            WindowAuth user = new WindowAuth();
-            user.Show();
-            Window.GetWindow(this).Close();
+
+        }
+
+        private void ButtonBack_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (MessageBox.Show("Вы уверены, что хотите выйти?", "Уведомление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                WindowAuth user = new WindowAuth();
+                user.Show();
+                Window.GetWindow(this).Close();
+            }
         }
     }
 }

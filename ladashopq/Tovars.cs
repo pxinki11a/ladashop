@@ -12,10 +12,10 @@ namespace ladashopq
     using System;
     using System.Collections.Generic;
     using System.IO;
-    
+
     public partial class Tovars
     {
-        public string Article { get; set; }
+        public int Article { get; set; }
         public int CategoryID { get; set; }
         public int ModeID { get; set; }
         public int ProviderID { get; set; }
@@ -24,14 +24,10 @@ namespace ladashopq
         public string Img { get; set; }
         public Nullable<int> Price { get; set; }
         public Nullable<int> Count { get; set; }
-    
-        public virtual Categories Categories { get; set; }
-        public virtual Models Models { get; set; }
-        public virtual Providers Providers { get; set; }
 
         public string Autoimage
         {
-            get 
+            get
             {
                 string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Resources\");
                 if (String.IsNullOrEmpty(Img) || String.IsNullOrWhiteSpace(Img) || Img == null)
@@ -45,6 +41,8 @@ namespace ladashopq
             }
         }
 
-
+        public virtual Categories Categories { get; set; }
+        public virtual Models Models { get; set; }
+        public virtual Providers Providers { get; set; }
     }
 }

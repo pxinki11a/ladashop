@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="920" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
+        Title="AdminWindow" Height="520" Width="920" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
@@ -14,17 +14,12 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="Окно администратора"/>
-        <TextBlock TextAlignment="left" VerticalAlignment="Top" Text="Текущая таблица" HorizontalAlignment="Left" Margin="225,20,0,0" Grid.Row="1"/>
-        <ComboBox Name="SelectTable" Grid.Row="1" SelectionChanged="ComboBox_SelectionChanged" Width="169">
-            <ComboBoxItem Content="Товары"/>
-            <ComboBoxItem Content="Категории"/>
-            <ComboBoxItem Content="Роли"/>
-            <ComboBoxItem Content="Модели"/>
-            <ComboBoxItem Content="Пользователи"/>
-            <ComboBoxItem Content="Поставщики"/>
-        </ComboBox>
+        
+        
 
-        <Frame Grid.Row="2" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated"/>
-        <Button Grid.Row="1" HorizontalAlignment="Right" Margin=" 0 0 40 0" Content="Добавить" Name="BtnAdd" Click="BtnAdd_Click"/>
+
+        <Frame Grid.Row="2" NavigationUIVisibility="Hidden" Name="AdminFrame" Navigated="AdminFrame_Navigated"/>
+        <Button Grid.Row="1" Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Right"  Height="35" Width="155" Click="ButtonBack_Click"/>
+        <Button Grid.Row="1" HorizontalAlignment="Center" Margin=" 0 0 40 0" Content="Добавить товар" Name="BtnAdd" Click="BtnAdd_Click"/>
     </Grid>
 </Window>

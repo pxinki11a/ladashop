@@ -12,6 +12,14 @@
 
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" >
+
+                    <Border Margin="5" Width="200" Height="200" BorderBrush="{StaticResource ColorAccent}">
+                        <Image Name="ImagePFP" Source="/Resources/zaglushka.png"/>
+                    </Border>
+                    <Button Content="Добавить" Click="BtnImage_Click"/>
+
+                </StackPanel>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <TextBlock Text="Название"/>
@@ -22,25 +30,12 @@
                         <TextBlock Text="Артикул"/>
                         <TextBox x:Name="TBArticle"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock Text="Описание"/>
-                        <TextBox x:Name="TBDescription"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock Text="Категория"/>
-                        <ComboBox Name="TBCategory" SelectedItem="Выберите категорию"/>
 
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock Text="Модель"/>
-                        <ComboBox Name="TBModel" SelectedItem="Выберите модель"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock Text="Поставщик"/>
-                        <ComboBox Name="TBProvider" SelectedItem="Выберите поставщика">
+                    
 
-                        </ComboBox>
-                    </StackPanel>
+                    
+                    
+                    
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <TextBlock Text="Количество"/>
                         <TextBox Name="TBCount"/>
@@ -49,15 +44,21 @@
                         <TextBlock Text="Цена"/>
                         <TextBox Name="TBPrice"/>
                     </StackPanel>
-                    <Button Margin="10" Content="Сохранить" Click="BtnSave_Click"/>
+                    <TextBlock Text="Описание"/>
+                    <TextBox x:Name="TBDescription" Height="63" Width="229"/>
+                    <Button Margin="0,30,0,0" Content="Сохранить"  Click="BtnSave_Click"/>
                 </StackPanel>
-                <StackPanel Orientation="Vertical" >
-                    <Border Margin="5" Width="250" Height="280" BorderBrush="{StaticResource ColorAccent}">
-                        <Image Name="ImagePFP" Source="/Resources/zaglushka.png"/>
-                    </Border>
-                    <Button Content="Добавить" Click="BtnImage_Click"/>
-                    <Button Grid.ColumnSpan="2" HorizontalAlignment="Right" Grid.Row="1" x:Name="BtnBack" Click="BtnBack_Click" Content="Назад"/>
+               
+                <StackPanel>
+                    <TextBlock Text="Категория"/>
+                    <ComboBox Name="TBCategory" SelectedItem="Выберите категорию" Width="153"/>
+                    <TextBlock Text="Модель"/>
+                    <ComboBox Name="TBModel" SelectedItem="Выберите модель" Width="151"/>
+                    <TextBlock Text="Поставщик"/>
+                    <ComboBox Name="TBProvider" SelectedItem="Выберите поставщика" Width="151"/>
+                    <Button Grid.ColumnSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,0" x:Name="BtnBack" Click="BtnBack_Click" Content="Назад"/>
                 </StackPanel>
+                
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -34,7 +34,7 @@
             <ComboBoxItem Content="Сначала дорогие"/>
         </ComboBox>
 
-        <Button Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Left" Margin="910,32,0,32" Height="35" Width="155" Click="Button_Click"/>
+        <Button Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Left" Margin="910,32,0,32" Height="35" Width="155" Click="ButtonBack_Click"/>
 
         <ComboBox Background="#FFCC6600" Name="Фильтрация" HorizontalAlignment="Left" Margin="750,0,0,0" Width="145" Text="Фильтрация" BorderBrush="#FFA73939" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="26">
             <ComboBoxItem Content="Автохимия"/>

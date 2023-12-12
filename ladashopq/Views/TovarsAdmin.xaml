@@ -1,0 +1,78 @@
+﻿<Page x:Class="ladashopq.Views.TovarsAdmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ladashopq.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TovarsAdmin">
+
+    <Grid>
+        <ListView Grid.Row="2" Name="LVTovarsAdmin" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LVTovarsAdmin_SelectionChanged">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black">
+                        <Grid HorizontalAlignment="Center">
+
+                            <Border Background="#b3b2bd" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,3,3">
+                                <StackPanel Orientation="Horizontal" Width="900" Height="200">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock FontWeight="Bold" FontSize="20" Text="{Binding ProductName}" TextAlignment="left"/>
+                                        <TextBlock Width="200" FontSize="20" FontWeight="Bold" Text="{Binding Article}" TextAlignment="Center"/>
+                                        <Border Margin="5 10 0 0" Width="100" Height="100" BorderBrush="Black" BorderThickness="2" CornerRadius="8,8,8,8">
+                                            <Image  HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="100" Source="{Binding Autoimage}" Name="Autoimage"/>
+                                        </Border>
+
+
+                                    </StackPanel>
+
+                                    <StackPanel>
+
+                                        <Border Width="300" Height="150" Margin="0,20,0,0"  HorizontalAlignment="Center" Background="#d3d3d9" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,8,8">
+                                            <StackPanel Orientation="Vertical">
+
+                                                <TextBlock TextAlignment="Left" Width="100" FontSize="15" Text="Описание:" />
+                                                <TextBlock FontSize="13" Text="{Binding Description}" TextAlignment="Left" Margin="10,0,0,15" TextWrapping="Wrap"/>
+
+                                            </StackPanel>
+                                        </Border>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Width="100" Text="Категории:" />
+
+                                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Width="100" Text="Модель:" />
+
+
+                                        <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Width="100" Text="Поставщик:" />
+                                        <TextBlock TextAlignment="Center" Width="100" FontSize="15" Text="Цена:" />
+                                        <TextBlock TextAlignment="Center" Width="100" FontSize="15" Text="В наличии:" />
+                                        <Button Content="Изменить" Click="BtnChange_Click"/>
+                                        
+                                    </StackPanel>
+
+
+
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Categories.CategoryName}" TextAlignment="Right"/>
+                                        <TextBlock Text="{Binding Models.ModelName}"  TextAlignment="Center"/>
+                                        <TextBlock Text="{Binding Providers.Provider}" TextAlignment="Center" />
+
+
+                                        <!--<TextBlock Text="{Binding Price}"   TextAlignment="Center" />-->
+                                        <TextBlock> <Run Text="{Binding Price}"/> <Run Text="Рублей"/></TextBlock>
+                                        <TextBlock><Run Text="{Binding Count}"/> <Run Text="Шт."/></TextBlock>
+                                        <Button Content="Удалить" Click="BtnDelete_Click"/>
+                                    </StackPanel>
+
+                                   
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Page>

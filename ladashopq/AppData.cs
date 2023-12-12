@@ -10,7 +10,7 @@ namespace ladashopq
 
     public enum TableName
     {
-        Tovar,
+        Tovars,
         Categories,
         Role,
         Models,
@@ -20,7 +20,7 @@ namespace ladashopq
 
     internal class AppData
     {
-        public static autoshopdbEntities1 db = new autoshopdbEntities1();
+        public static autoshopdbEntities2 db = new autoshopdbEntities2();
 
         public static Frame frameAuth;
 
