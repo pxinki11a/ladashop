@@ -6,9 +6,15 @@
       xmlns:local="clr-namespace:ladashopq.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="EditRequestsPage">
+      Title="EditRequestsPage" Background="#D5CFE1">
 
     <Grid>
-        
+        <ComboBox Width="160" Height="30" HorizontalAlignment="Left" Margin="308,169,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="157" Margin="98,110,0,0" VerticalAlignment="Top" Width="161"/>
+        <Button Content="Заказать" HorizontalAlignment="Left" Margin="55,396,0,0" VerticalAlignment="Top"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="596,396,0,0" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Окно заказа" FontSize="24" VerticalAlignment="Top"/>
+        <Label Content="Изображение" HorizontalAlignment="Left" Margin="122,68,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>
