@@ -68,6 +68,10 @@
                                         <TextBlock><Run Text="{Binding Count}"/> <Run Text="Шт."/></TextBlock>
                                     </StackPanel>
 
+                                    <StackPanel>
+                                        <TextBlock> <Run Text="Статус"> </Run><Run Text="{Binding Status.StatusName}"/></TextBlock>
+                                    </StackPanel>
+                                    
                                 </StackPanel>
                             </Border>
                         </Grid>

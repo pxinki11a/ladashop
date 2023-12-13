@@ -26,12 +26,27 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Provider" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "autoshopdb.dbo.Requests" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Requests">
+          <Property Name="Requests" Type="int" />
+          <Property Name="ArticleID" Type="int" />
+          <Property Name="UsersID" Type="int" />
+          <Property Name="StatusID" Type="int" />
+        </EntityType>-->
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoleName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Tovars">
           <Key>
@@ -56,6 +71,15 @@
           <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="RoleID" Type="int" Nullable="false" />
         </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "autoshopdb.dbo.Requests", на которую ссылается связь.
+        <Association Name="FK_Requests_Status" />-->
+        <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "autoshopdb.dbo.Requests", на которую ссылается связь.
+        <Association Name="FK_Requests_Tovars" />-->
+        <!--Ошибки, обнаруженные при создании:
+ошибка 6004: Невозможно найти таблицу "autoshopdb.dbo.Requests", на которую ссылается связь.
+        <Association Name="FK_Requests_Users" />-->
         <Association Name="FK_Tovar_Categories">
           <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
           <End Role="Tovars" Type="Self.Tovars" Multiplicity="*" />
@@ -109,6 +133,7 @@
           <EntitySet Name="Models" EntityType="Self.Models" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Providers" EntityType="Self.Providers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tovars" EntityType="Self.Tovars" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Tovar_Categories" Association="Self.FK_Tovar_Categories">
@@ -164,6 +189,13 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Users_Role" FromRole="Role" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Tovars">
           <Key>
@@ -240,11 +272,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="autoshopdbEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="autoshopdbEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Categories" />
           <EntitySet Name="Models" EntityType="Self.Models" />
           <EntitySet Name="Providers" EntityType="Self.Providers" />
           <EntitySet Name="Role" EntityType="Self.Role" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
           <EntitySet Name="Tovars" EntityType="Self.Tovars" />
           <EntitySet Name="Users" EntityType="Self.Users" />
           <AssociationSet Name="FK_Tovar_Categories" Association="Self.FK_Tovar_Categories">
@@ -269,7 +302,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище autoshopdbModelContainer" CdmEntityContainer="autoshopdbEntities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище autoshopdbModelContainer" CdmEntityContainer="autoshopdbEntities3">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="autoshopdbModel.Categories">
               <MappingFragment StoreEntitySet="Categories">
@@ -299,6 +332,14 @@
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="autoshopdbModel.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

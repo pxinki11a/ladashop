@@ -12,31 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ladashopq;
 
-namespace ladashopq
+namespace ladashopq.Views
 {
     /// <summary>
-    /// Логика взаимодействия для Tovar.xaml
+    /// Логика взаимодействия для EditRequestsPage.xaml
     /// </summary>
-    public partial class Tovar : Page
+    public partial class EditRequestsPage : Page
     {
-        public TableName currentTable;
-
-        public Tovar()
+        public EditRequestsPage()
         {
             InitializeComponent();
-            Update();
-        }
-        public void Update()
-        {
-            var content = AppData.db.Tovars.ToList();
-            LVMain.ItemsSource = content;
-        }
-
-        private void ButtonChangeRequest_Click(object sender, RoutedEventArgs e)
-        {
-        
         }
     }
 }

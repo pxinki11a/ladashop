@@ -12,20 +12,9 @@ namespace ladashopq
     using System;
     using System.Collections.Generic;
     
-    public partial class Tovars
+    public partial class Status
     {
-        public int Article { get; set; }
-        public int CategoryID { get; set; }
-        public int ModeID { get; set; }
-        public int ProviderID { get; set; }
-        public string Description { get; set; }
-        public string ProductName { get; set; }
-        public string Img { get; set; }
-        public Nullable<int> Price { get; set; }
-        public Nullable<int> Count { get; set; }
-    
-        public virtual Categories Categories { get; set; }
-        public virtual Models Models { get; set; }
-        public virtual Providers Providers { get; set; }
+        public int ID { get; set; }
+        public string StatusName { get; set; }
     }
 }
