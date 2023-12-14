@@ -29,5 +29,6 @@
         <TextBlock HorizontalAlignment="Left"  Margin="304,34,0,0" Grid.Row="0" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-0.563,0.495" Text=""/>
         <Button Content="Вернуться ко входу" FontSize="12"  HorizontalAlignment="Left" FontFamily="Gabriola" Margin="876,34,0,31" Height="35" Width="155" Click="ButtonBack_Click" RenderTransformOrigin="0.036,0.319"/>
         <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="GuestFrame" Navigated="GuestFrame_Navigated" Margin="0,0,0,-76"/>
+        <TextBlock Grid.Row="0" Text="Вы вошли как гость" HorizontalAlignment="Left" FontSize="22" Margin="625,38,0,36" Width="221"/>
     </Grid>
 </Window>

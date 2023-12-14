@@ -23,10 +23,11 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Name="TBLogin" Text="" FontSize="22"  Width="169" Margin="667,21,0,19" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Row="0" Name="TBLogin" Text="" FontSize="22"  Width="169" Margin="643,38,0,26" HorizontalAlignment="Left"/>
         <Image  Grid.Row="0" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
-        <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="114,33,0,41" Width="211"/>
+        <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="130,36,0,38" Width="211"/>
         <Button Content="Вернуться ко входу" FontSize="12"  HorizontalAlignment="Left" FontFamily="Gabriola" Margin="910,32,0,32" Height="35" Width="155" Click="ButtonBack_Click"/>
         <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,0,-76"/>
+        <TextBlock Grid.Row="0" Text="Пользователь:" HorizontalAlignment="Left" FontSize="22" Margin="483,36,0,38" Width="211"/>
     </Grid>
 </Window>
