@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="64ad0b33057e42609e313453c1e31e3a" Name="Diagram1">
-        <EntityTypeShape EntityType="autoshopdbModel.Applications" Width="1.5" PointX="7.25" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="f150e7743ba145eabb62900ff7d82c7b" Name="Diagram1">
+        <EntityTypeShape EntityType="autoshopdbModel.Applications" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="autoshopdbModel.Categories" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="autoshopdbModel.Models" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="autoshopdbModel.Providers" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />

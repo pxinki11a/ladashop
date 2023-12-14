@@ -23,12 +23,12 @@
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <TextBlock Text="Название"/>
-                        <TextBox x:Name="TBProductName"/>
+                        <TextBox x:Name="TBProductName" Background="White"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <TextBlock Text="Артикул"/>
-                        <TextBox x:Name="TBArticle"/>
+                        <TextBox x:Name="TBArticle" Background="White"/>
                     </StackPanel>
 
                     
@@ -38,14 +38,14 @@
                     
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <TextBlock Text="Количество"/>
-                        <TextBox Name="TBCount"/>
+                        <TextBox Name="TBCount" Background="White"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <TextBlock Text="Цена"/>
-                        <TextBox Name="TBPrice"/>
+                        <TextBox Name="TBPrice" Background="White"/>
                     </StackPanel>
                     <TextBlock Text="Описание"/>
-                    <TextBox x:Name="TBDescription" Height="63" Width="229"/>
+                    <TextBox x:Name="TBDescription" Background="White" Height="63" Width="229"/>
                     <Button Margin="0,30,0,0" Content="Сохранить"  Click="BtnSave_Click"/>
                 </StackPanel>
                

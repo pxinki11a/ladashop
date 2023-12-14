@@ -13,10 +13,10 @@ namespace ladashopq
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class asEntities : DbContext
+    public partial class asdbEntities3 : DbContext
     {
-        public asEntities()
-            : base("name=asEntities")
+        public asdbEntities3()
+            : base("name=asdbEntities3")
         {
         }
     

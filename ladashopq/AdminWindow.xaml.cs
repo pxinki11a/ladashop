@@ -27,6 +27,7 @@ namespace ladashopq
             InitializeComponent();
             AppFrame.frameMain = AdminFrame;
             AdminFrame.Navigate(new Views.TovarsAdmin());
+            TBLogin.Text = AppData.CurrentUser.Login.ToString();
         }
 
 

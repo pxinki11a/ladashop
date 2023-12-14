@@ -13,6 +13,6 @@ namespace ladashopq
     /// </summary>
     public partial class App : Application
     {
-        public static asEntities autoshop { get; } = new asEntities();
+       
     }
 }

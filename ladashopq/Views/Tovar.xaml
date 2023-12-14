@@ -28,7 +28,7 @@
         </ComboBox>
 
 
-        <ListView Grid.Row="1" Name="LVMain" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <ListView Grid.Row="1" Name="LVMain" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,-150" Grid.RowSpan="2">
             <ListView.ItemTemplate>
                 <DataTemplate>
 

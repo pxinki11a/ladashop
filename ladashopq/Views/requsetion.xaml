@@ -32,8 +32,8 @@
 
         <TextBlock  Name="TBDescription" HorizontalAlignment="Left" FontSize="17" Margin="345,175,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="416" Height="136"/>
 
-        <Button HorizontalAlignment="Left" Background="White"  Content="Назад" Click="BtnBack_Click" Grid.Row="0" Width="118" Margin="677,18,0,17"/>
-        <Button Background="White"
+        <Button HorizontalAlignment="Left"   Content="Назад" Click="BtnBack_Click" Grid.Row="0" Width="118" Margin="677,18,0,17"/>
+        <Button
              Name="bsave"
              Grid.Row="1"                  
              HorizontalAlignment="Left"

@@ -42,6 +42,8 @@ namespace ladashopq
                 {
                     if (currentUser.Login.Equals(TBLogin.Text) && currentUser.Password.Equals(TBPassword.Password))
                     {
+                        AppData.CurrentUser = currentUser;
+
                         if (currentUser.RoleID == 1)
                         {
                             AdminWindow admin = new AdminWindow(); //currentUser.userID

@@ -20,7 +20,7 @@ namespace ladashopq
 
     internal class AppData
     {
-        public static asEntities db = new asEntities();
+        public static asdbEntities3 db = new asdbEntities3();
 
         public static Frame frameAuth;
 

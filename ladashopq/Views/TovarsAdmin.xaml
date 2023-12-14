@@ -28,7 +28,7 @@
 
 
 
-        <ListView Grid.Row="2" Name="LVTovarsAdmin" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LVTovarsAdmin_SelectionChanged">
+        <ListView Grid.Row="1" Name="LVTovarsAdmin" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LVTovarsAdmin_SelectionChanged" Margin="0,0,0,-90">
             <ListView.ItemTemplate>
 
                 <DataTemplate>

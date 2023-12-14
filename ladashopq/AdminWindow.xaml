@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="Окно администратора" Height="800" Width="920" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
+        Title="Окно администратора" Height="900" Width="920" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35"/>
@@ -27,5 +27,6 @@
         <Button Grid.Row="1" Content="Вернуться ко входу" FontSize="12" HorizontalAlignment="Right"  Height="35" Width="155" Click="ButtonBack_Click"/>
         <Button Grid.Row="3" HorizontalAlignment="Left" Margin="278,10,0,10" Content="Добавить товар" Name="BtnAdd" Click="BtnAdd_Click"/>
         <Button Content="Заявки"  HorizontalAlignment="Center" Margin="206,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="30" Width="128" Click="ButtonRequest_Click"/>
+        <TextBlock Grid.Row="1" Name="TBLogin" Text="" FontSize="22"  Width="169" Margin="563,17,0,23" HorizontalAlignment="Left"/>
     </Grid>
 </Window>

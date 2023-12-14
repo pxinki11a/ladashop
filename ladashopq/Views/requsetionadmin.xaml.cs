@@ -42,7 +42,15 @@ namespace ladashopq.Views
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            
+            var currentApplication = (sender as Button).DataContext as Applications;
+            //var currentApplications = (sender as Button).DataContext as Applications;
+            if (MessageBox.Show("Вы уверены что хотите удалить эту заявку?", "Внимание",
+                MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                AppData.db.Applications.Remove(currentApplication);
+                AppData.db.SaveChanges();
+                Update();
+            }
         }
 
         private void Tovarsq_SelectionChanged(object sender, SelectionChangedEventArgs e)

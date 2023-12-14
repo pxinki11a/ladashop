@@ -32,7 +32,7 @@ namespace ladashopq.Views
             var content = AppData.db.Tovars.ToList();
             LVGuest.ItemsSource = content;
 
-            var tovars = App.autoshop.Tovars.ToList();
+            var tovars = AppData.db.Tovars.ToList();
             switch (Sort.SelectedIndex)
             {
                 case 0:
@@ -52,7 +52,7 @@ namespace ladashopq.Views
             }
 
             tovars = tovars.Where(t => t.ProductName.ToLower().Contains(txtSearch.Text.ToLower()) || t.Description.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
-            var amount = App.autoshop.Tovars.ToList().Count;
+            var amount = AppData.db.Tovars.ToList().Count;
             if (tovars.Count == 0)
             {
                 resultbox.Text = "По вашему запросу ничего не найдено";

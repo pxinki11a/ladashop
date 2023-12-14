@@ -15,9 +15,9 @@ namespace ladashopq
     public partial class Applications
     {
         public int Application { get; set; }
-        public Nullable<int> UsersID { get; set; }
-        public Nullable<int> ArticleID { get; set; }
-        public Nullable<int> StatusID { get; set; }
+        public int UsersID { get; set; }
+        public int ArticleID { get; set; }
+        public int StatusID { get; set; }
     
         public virtual Status Status { get; set; }
         public virtual Tovars Tovars { get; set; }

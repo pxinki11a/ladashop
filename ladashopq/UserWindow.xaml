@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="Окно пользователя" Height="800" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+        Title="Окно пользователя" Height="900" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid Margin="0,0,0,-48" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,7 +23,7 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
-
+        <TextBlock Grid.Row="0" Name="TBLogin" Text="" FontSize="22"  Width="169" Margin="667,21,0,19" HorizontalAlignment="Left"/>
         <Image  Grid.Row="0" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="114,33,0,41" Width="211"/>
         <Button Content="Вернуться ко входу" FontSize="12"  HorizontalAlignment="Left" FontFamily="Gabriola" Margin="910,32,0,32" Height="35" Width="155" Click="ButtonBack_Click"/>
