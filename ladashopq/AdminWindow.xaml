@@ -19,7 +19,7 @@
         <Image  Grid.Row="1" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="1" Text="Запчасти Lada" FontSize="22"  Width="169" Margin="90,20,0,20" HorizontalAlignment="Left"/>
 
-
+        <Grid Grid.Row="4" Background="#D5CFE1"/>
 
 
 
