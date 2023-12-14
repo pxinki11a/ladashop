@@ -85,9 +85,10 @@ namespace ladashopq.Views
             {
                 Applications application = new Applications()
                 {
-                    ArticleID = Int32.Parse(TBArticle.Text),
-                    StatusID = status.ID
 
+                    ArticleID = Int32.Parse(TBArticle.Text),
+                    StatusID = status.ID,
+                    UsersID = AppData.CurrentUser.ID
 
                 };
                 AppData.db.Applications.Add(application);
