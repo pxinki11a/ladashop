@@ -9,10 +9,14 @@
       Title="TovarsAdmin">
 
     <Grid>
+        
         <ListView Grid.Row="2" Name="LVTovarsAdmin" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="LVTovarsAdmin_SelectionChanged">
             <ListView.ItemTemplate>
+                
                 <DataTemplate>
+                    
                     <Border BorderBrush="Black">
+                        
                         <Grid HorizontalAlignment="Center">
 
                             <Border Background="#b3b2bd" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,3,3">

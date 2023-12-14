@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="UserWindow" Height="450" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+        Title="Окно пользователя" Height="800" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
     <Grid Margin="0,0,0,-48" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,27 +23,27 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="500"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="Searchq" Height="35" Margin="400,0,0,0" TextWrapping="Wrap" Text="" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="Search"/>
-        <TextBlock Grid.Row="0" Text="Поиск:" FontFamily="Gabriola" FontSize="26" HorizontalAlignment="Center" Margin="0,30,347,34" Width="63"/>
+
         <Image  Grid.Row="0" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="114,33,0,41" Width="211"/>
-        <ComboBox Name="Сортировка" Margin="600,0,0,0" IsEditable="True" IsReadOnly="True" Text="Сортировать по" FontSize="26" FontFamily="Gabriola" Width="145" HorizontalAlignment="Left" Height="26">
+        <ComboBox Name="Сортировка" Margin="600,0,0,0" IsEditable="True" IsReadOnly="True" Text="Сортировать по" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontFamily="Gabriola" Width="145" HorizontalAlignment="Left" Height="26">
 
             <ComboBoxItem Content="По алфавиту"/>
             <ComboBoxItem Content="Сначала дешевые"/>
             <ComboBoxItem Content="Сначала дорогие"/>
         </ComboBox>
+        <TextBlock HorizontalAlignment="Left"  Margin="304,34,0,0" Grid.Row="0" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-0.563,0.495"><Run Language="ru-ru" Text="Поиск:"/></TextBlock>
+        <TextBox x:Name="txtSearch"  Width="208" FontSize="18" Background="White" HorizontalAlignment="Left" Margin="379,38,0,39" TextWrapping="Wrap" Grid.Row="0" Visibility="Visible" Cursor="Hand" TextChanged="TextBox_TextChanged"/>
+        <Button Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Left" FontFamily="Gabriola" Margin="910,32,0,32" Height="35" Width="155" Click="ButtonBack_Click"/>
 
-        <Button Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Left" Margin="910,32,0,32" Height="35" Width="155" Click="ButtonBack_Click"/>
-
-        <ComboBox Background="#FFCC6600" Name="Фильтрация" HorizontalAlignment="Left" Margin="750,0,0,0" Width="145" Text="Фильтрация" BorderBrush="#FFA73939" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="26">
+        <ComboBox Name="Фильтрация" HorizontalAlignment="Left" Margin="750,0,0,0" Width="145" FontFamily="Gabriola" Text="Фильтрация" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="26">
             <ComboBoxItem Content="Автохимия"/>
-            <ComboBoxItem Content="Масла, тех.жидкости"/>
+            <ComboBoxItem Content="Тех.жидкости"/>
             <ComboBoxItem Content="Детали кузова"/>
             <ComboBoxItem Content="Ходовая часть"/>
             <ComboBoxItem Content="Электрика"/>
-            
+
         </ComboBox>
-        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,2,0"/>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,0,-76"/>
     </Grid>
 </Window>

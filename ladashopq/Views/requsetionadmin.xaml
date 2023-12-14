@@ -1,0 +1,54 @@
+﻿<Page x:Class="ladashopq.Views.requsetionadmin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ladashopq.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="requsetionadmin">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="*"/>
+
+
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="1" Name="RequestsAdmin" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="Tovarsq_SelectionChanged" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Grid HorizontalAlignment="Center" Width="700">
+                            <Border BorderBrush="#12486B" Background="#b3b2bd" Width="700" BorderThickness="2" CornerRadius="8,8,8,8">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel VerticalAlignment="Center"  Orientation="Vertical">
+
+                                        <TextBlock Width="100" FontSize="20" FontWeight="Bold" Text="{Binding ArticleID}" TextAlignment="Center"/>
+                                    </StackPanel>
+
+                                    <StackPanel Width="194" VerticalAlignment="Center" Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center"  FontSize="14" FontWeight="DemiBold"  Width="193" Text="{Binding Tovars.ProductName}"  TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="29">
+                                            <TextBlock.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform/>
+                                                    <SkewTransform AngleY="0.565"/>
+                                                    <RotateTransform Angle="-0.489"/>
+                                                    <TranslateTransform X="0.007" Y="0.819"/>
+                                                </TransformGroup>
+                                            </TextBlock.RenderTransform>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <Button Content="Удалить" Margin="505,10,30,4" Click="ButtonDelete_Click" />
+                            <Button Content="Подробнее"  FontSize="12" Click="ButtonInfo_Click" Margin="318,10,217,4"/>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

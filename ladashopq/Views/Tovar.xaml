@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ladashopq"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
       Title="Tovar">
 
     <Grid>
@@ -18,11 +18,13 @@
         <ListView Grid.Row="1" Name="LVMain" SelectedIndex="-1" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.ItemTemplate>
                 <DataTemplate>
+                    
                     <Border BorderBrush="Black">
+
                         <Grid HorizontalAlignment="Center">
 
-                            <Border Background="#b3b2bd" BorderBrush="#b7b6c1" BorderThickness="1" CornerRadius="8,8,3,3">
-                                <StackPanel Orientation="Horizontal" Width="900" Height="200">
+                            <Border Background="#b3b2bd" BorderBrush="#b7b6c1" BorderThickness="1" Width="1100" CornerRadius="8,8,3,3">
+                                <StackPanel Orientation="Horizontal" Width="1000" Height="200">
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock FontWeight="Bold" FontSize="20" Text="{Binding ProductName}" TextAlignment="left"/>
                                         <TextBlock Width="200" FontSize="20" FontWeight="Bold" Text="{Binding Article}" TextAlignment="Center"/>
@@ -57,8 +59,8 @@
 
 
 
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Categories.CategoryName}" TextAlignment="Right"/>
+                                    <StackPanel Orientation="Vertical"  Width="140">
+                                        <TextBlock Text="{Binding Categories.CategoryName}" TextAlignment="Center"/>
                                         <TextBlock Text="{Binding Models.ModelName}"  TextAlignment="Center"/>
                                         <TextBlock Text="{Binding Providers.Provider}" TextAlignment="Center" />
 
@@ -69,7 +71,7 @@
                                     </StackPanel>
 
                                     <StackPanel>
-                                        <TextBlock> <Run Text="Статус"> </Run><Run Text="{Binding Status.StatusName}"/></TextBlock>
+                                        <Button Margin="25,70,0,0" Content="Сделать заявку" Click="ButtonUserRequest_Click"/>
                                     </StackPanel>
                                     
                                 </StackPanel>

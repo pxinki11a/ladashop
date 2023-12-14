@@ -1,0 +1,18 @@
+﻿<Window x:Class="ladashopq.RequestsAdmin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ladashopq"
+        mc:Ignorable="d"
+        Title="RequestsAdmin" Height="500" Width="700" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" NavigationUIVisibility="Hidden" Name="ReqAdminFrame" Navigated="MainFrame_Navigated"/>
+        <Button Content="Назад" HorizontalAlignment="Right" Margin="0,407,35,0" VerticalAlignment="Top" Click="ButtonBack_Click" Height="40" Width="170"/>
+    </Grid>
+</Window>

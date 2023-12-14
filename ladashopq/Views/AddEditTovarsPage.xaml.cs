@@ -59,6 +59,12 @@ namespace ladashopq.Views
             TBCount.Text = Convert.ToString(currentTovar.Count);
             TBPrice.Text = Convert.ToString(currentTovar.Price);
 
+            if (currentTovar.Img != null)
+            {
+                _mainImageData = File.ReadAllBytes(path + currentTovar.Img);
+                tovarimg.Source = new ImageSourceConverter().ConvertFrom(_mainImageData) as ImageSource;
+            }
+
             this.WindowTitle = "Добавление товара";
             var category = AppData.db.Categories.Select(r => r.CategoryName).ToList();
             TBCategory.ItemsSource = category;
@@ -80,7 +86,7 @@ namespace ladashopq.Views
                 extension = Path.GetExtension(img);
                 selectefFileName = ofd.FileName;
                 _mainImageData = File.ReadAllBytes(ofd.FileName);
-                ImagePFP.Source = new ImageSourceConverter()
+                tovarimg.Source = new ImageSourceConverter()
                     .ConvertFrom(_mainImageData) as ImageSource;
             }
             
@@ -94,6 +100,8 @@ namespace ladashopq.Views
 
             if (img != null)
             {
+
+
                 img = TBArticle.Text + extension;
                 var files = Directory.GetFiles(path);
                 int a = 0;
@@ -141,6 +149,8 @@ namespace ladashopq.Views
                 currentTovar.CategoryID = category.ID;
                 currentTovar.ModeID = model.ID;
                 currentTovar.ProviderID = provider.ID;
+                currentTovar.Price = Int32.Parse(TBPrice.Text);
+                currentTovar.Count = Int32.Parse(TBCount.Text);
                 AppData.db.SaveChanges();
                 MessageBox.Show("Товар успешно обновлен!");
                 currentTovar = null;

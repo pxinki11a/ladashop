@@ -13,10 +13,10 @@ namespace ladashopq
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class autoshopdbEntities3 : DbContext
+    public partial class asEntities : DbContext
     {
-        public autoshopdbEntities3()
-            : base("name=autoshopdbEntities3")
+        public asEntities()
+            : base("name=asEntities")
         {
         }
     
@@ -25,11 +25,13 @@ namespace ladashopq
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Applications> Applications { get; set; }
         public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Models> Models { get; set; }
         public virtual DbSet<Providers> Providers { get; set; }
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Status> Status { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tovars> Tovars { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }

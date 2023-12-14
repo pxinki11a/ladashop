@@ -12,18 +12,15 @@ namespace ladashopq
     using System;
     using System.Collections.Generic;
     
-    public partial class Status
+    public partial class Applications
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Status()
-        {
-            this.Applications = new HashSet<Applications>();
-        }
+        public int Application { get; set; }
+        public Nullable<int> UsersID { get; set; }
+        public Nullable<int> ArticleID { get; set; }
+        public Nullable<int> StatusID { get; set; }
     
-        public int ID { get; set; }
-        public string StatusName { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Applications> Applications { get; set; }
+        public virtual Status Status { get; set; }
+        public virtual Tovars Tovars { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

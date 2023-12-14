@@ -11,9 +11,16 @@ namespace ladashopq
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     
     public partial class Tovars
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Tovars()
+        {
+            this.Applications = new HashSet<Applications>();
+        }
+    
         public int Article { get; set; }
         public int CategoryID { get; set; }
         public int ModeID { get; set; }
@@ -23,7 +30,25 @@ namespace ladashopq
         public string Img { get; set; }
         public Nullable<int> Price { get; set; }
         public Nullable<int> Count { get; set; }
-    
+
+        public string Autoimage
+        {
+            get
+            {
+                string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Resources\");
+                if (String.IsNullOrEmpty(Img) || String.IsNullOrWhiteSpace(Img) || Img == null)
+                {
+                    return path + "zaglushka.png";
+                }
+                else
+                {
+                    return path + Img;
+                }
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Applications> Applications { get; set; }
         public virtual Categories Categories { get; set; }
         public virtual Models Models { get; set; }
         public virtual Providers Providers { get; set; }

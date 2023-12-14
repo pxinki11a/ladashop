@@ -54,6 +54,28 @@ namespace ladashopq
         {
 
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Фильтрация_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Сортировка_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ButtonRequest_Click(object sender, RoutedEventArgs e)
+        {
+            RequestsAdmin reqadmin = new RequestsAdmin();
+            reqadmin.Show();
+            Window.GetWindow(this).Close();
+        }
     }
 }
 

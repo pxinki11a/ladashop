@@ -4,14 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9dc7e20867514dbaa1c28263285449d3" Name="Diagram1">
-        <EntityTypeShape EntityType="autoshopdbModel.Categories" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="autoshopdbModel.Models" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="autoshopdbModel.Providers" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="autoshopdbModel.Role" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="autoshopdbModel.Status" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+      <Diagram DiagramId="64ad0b33057e42609e313453c1e31e3a" Name="Diagram1">
+        <EntityTypeShape EntityType="autoshopdbModel.Applications" Width="1.5" PointX="7.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.Categories" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.Models" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.Providers" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.Role" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.Status" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="autoshopdbModel.Tovars" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="autoshopdbModel.Users" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="autoshopdbModel.Users" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="autoshopdbModel.FK_Applications_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="autoshopdbModel.FK_Applications_Tovars" ManuallyRouted="false" />
+        <AssociationConnector Association="autoshopdbModel.FK_Applications_Users" ManuallyRouted="false" />
         <AssociationConnector Association="autoshopdbModel.FK_Tovar_Categories" ManuallyRouted="false" />
         <AssociationConnector Association="autoshopdbModel.FK_Tovar_Models" ManuallyRouted="false" />
         <AssociationConnector Association="autoshopdbModel.FK_Tovar_Providers" ManuallyRouted="false" />

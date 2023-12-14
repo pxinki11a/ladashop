@@ -13,41 +13,41 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace ladashopq
+namespace ladashopq.Views
 {
     /// <summary>
-    /// Логика взаимодействия для Tovar.xaml
+    /// Логика взаимодействия для requsetionadmin.xaml
     /// </summary>
-    public partial class Tovar : Page
+    public partial class requsetionadmin : Page
     {
-        public TableName currentTable;
-
-        public Tovar()
+        public requsetionadmin()
         {
             InitializeComponent();
             Update();
         }
+
         public void Update()
         {
-            var content = AppData.db.Tovars.ToList();
-            LVMain.ItemsSource = content;
+            var content = AppData.db.Applications.ToList();
+            RequestsAdmin.ItemsSource = content;
         }
 
-        private void ButtonChangeRequest_Click(object sender, RoutedEventArgs e)
-        {
-        
-        }
 
-        
-
-        private void ButtonUserRequest_Click(object sender, RoutedEventArgs e)
+        private void ButtonInfo_Click(object sender, RoutedEventArgs e)
         {
             var button = (Button)sender;
             var currentTovar = button.DataContext as Tovars;
             NavigationService.Navigate(new Views.requsetion(currentTovar));
+        }
 
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
             
+        }
+
+        private void Tovarsq_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

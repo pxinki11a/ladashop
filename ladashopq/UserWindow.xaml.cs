@@ -32,9 +32,10 @@ namespace ladashopq
 
         private void Search(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
+       
         private void Фильтрация_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -56,6 +57,11 @@ namespace ladashopq
                 user.Show();
                 Window.GetWindow(this).Close();
             }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

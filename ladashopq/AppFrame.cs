@@ -12,5 +12,7 @@ namespace ladashopq
         public static Frame frameAuth;
         public static Frame frameMain;
         public static Frame AdminFrame;
+        public static Frame RequestsFrame;
+        public static Frame RequestsAdminFrame;
     }
 }

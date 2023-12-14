@@ -15,7 +15,7 @@
                 <StackPanel Orientation="Vertical" >
 
                     <Border Margin="5" Width="200" Height="200" BorderBrush="{StaticResource ColorAccent}">
-                        <Image Name="ImagePFP" Source="/Resources/zaglushka.png"/>
+                        <Image Name="tovarimg" Source="/Resources/zaglushka.png"/>
                     </Border>
                     <Button Content="Добавить" Click="BtnImage_Click"/>
 
