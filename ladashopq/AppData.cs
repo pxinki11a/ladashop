@@ -26,5 +26,7 @@ namespace ladashopq
 
         public static int UserID;
 
+        public static Users CurrentUser;
+
     }
 }

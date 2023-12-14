@@ -57,6 +57,7 @@ namespace ladashopq.Views
             TBDescription.Text = currentTovar.Description;
             TBCategory.Text = currentTovar.Categories.CategoryName;
             TBModel.Text = currentTovar.Models.ModelName;
+            TBCount.Text = currentTovar.Count.ToString();
             TBProvider.Text = currentTovar.Providers.Provider;
             if (currentTovar.Img != null)
             {

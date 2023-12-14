@@ -83,8 +83,8 @@ namespace ladashopq
 
         private void BtnSignInGuest_Click(object sender, RoutedEventArgs e)
         {
-            UserWindow user = new UserWindow();
-            user.Show();
+            GuestWindow guest = new GuestWindow();
+            guest.Show();
             Window.GetWindow(this).Close();
         }
     }

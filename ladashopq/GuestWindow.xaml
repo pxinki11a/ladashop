@@ -1,11 +1,11 @@
-﻿<Window x:Class="ladashopq.UserWindow"
+﻿<Window x:Class="ladashopq.GuestWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="Окно пользователя" Height="800" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" >
+        Title="GuestWindow" Height="800" Width="1080" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Margin="0,0,0,-48" RenderTransformOrigin="0.5,0.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,7 +26,8 @@
 
         <Image  Grid.Row="0" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="0" Text="Запчасти Lada" HorizontalAlignment="Left" FontSize="22" Margin="114,33,0,41" Width="211"/>
-        <Button Content="Вернуться ко входу" FontSize="12"  HorizontalAlignment="Left" FontFamily="Gabriola" Margin="910,32,0,32" Height="35" Width="155" Click="ButtonBack_Click"/>
-        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="MainFrame" Navigated="MainFrame_Navigated" Margin="0,0,0,-76"/>
+        <TextBlock HorizontalAlignment="Left"  Margin="304,34,0,0" Grid.Row="0" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-0.563,0.495" Text=""/>
+        <Button Content="Вернуться ко входу" FontSize="12"  HorizontalAlignment="Left" FontFamily="Gabriola" Margin="876,34,0,31" Height="35" Width="155" Click="ButtonBack_Click" RenderTransformOrigin="0.036,0.319"/>
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="GuestFrame" Navigated="GuestFrame_Navigated" Margin="0,0,0,-76"/>
     </Grid>
 </Window>

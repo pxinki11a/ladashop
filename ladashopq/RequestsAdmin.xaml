@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ladashopq"
         mc:Ignorable="d"
-        Title="RequestsAdmin" Height="500" Width="700" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
+        Title="RequestsAdmin" Height="500" Width="900" WindowStartupLocation="CenterScreen" Background="#D5CFE1" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
 

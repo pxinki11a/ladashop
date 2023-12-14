@@ -37,10 +37,10 @@ namespace ladashopq
             {
                 string path = Path.Combine(Directory.GetParent(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).FullName)).FullName, @"Resources\");
                 if (String.IsNullOrEmpty(Img) || String.IsNullOrWhiteSpace(Img) || Img == null)
-                {
+        {
                     return path + "zaglushka.png";
                 }
-                else
+        else
                 {
                     return path + Img;
                 }

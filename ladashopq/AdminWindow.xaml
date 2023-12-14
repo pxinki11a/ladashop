@@ -19,28 +19,13 @@
         <Image  Grid.Row="1" Width="100" HorizontalAlignment="Left" Source="Resources/logo.png" />
         <TextBlock Grid.Row="1" Text="Запчасти Lada" FontSize="22"  Width="169" Margin="90,20,0,20" HorizontalAlignment="Left"/>
 
-        <ComboBox Name="Сортировка" Grid.Row="1" Margin="596,6,0,38" IsEditable="True" IsReadOnly="True" Text="Сортировать по" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontFamily="Gabriola" Width="145" HorizontalAlignment="Left" Height="26" SelectionChanged="Сортировка_SelectionChanged">
 
-            <ComboBoxItem Content="По алфавиту"/>
-            <ComboBoxItem Content="Сначала дешевые"/>
-            <ComboBoxItem Content="Сначала дорогие"/>
-        </ComboBox>
 
-        <ComboBox Name="Фильтрация" HorizontalAlignment="Left" Margin="596,34,0,10" Grid.Row="1" Width="145" FontFamily="Gabriola" Text="Фильтрация" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" SelectionChanged="Фильтрация_SelectionChanged" IsReadOnly="True" IsEditable="True" Height="26">
-            <ComboBoxItem Content="Автохимия"/>
-            <ComboBoxItem Content="Тех.жидкости"/>
-            <ComboBoxItem Content="Детали кузова"/>
-            <ComboBoxItem Content="Ходовая часть"/>
-            <ComboBoxItem Content="Электрика"/>
 
-        </ComboBox>
-
-        <TextBlock HorizontalAlignment="Left"  Margin="264,18,0,0" Grid.Row="1" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-0.563,0.495"><Run Language="ru-ru" Text="Поиск:"/></TextBlock>
-        <TextBox x:Name="txtSearch"  Width="229" FontSize="18" Background="White" HorizontalAlignment="Left" Margin="338,23,0,24" TextWrapping="Wrap" Grid.Row="1" Visibility="Visible" Cursor="Hand" TextChanged="TextBox_TextChanged"/>
 
         <Frame Grid.Row="2" NavigationUIVisibility="Hidden" Name="AdminFrame" Navigated="AdminFrame_Navigated"/>
-        <Button Grid.Row="1" Content="Вернуться ко входу" FontSize="12" Background="white" HorizontalAlignment="Right"  Height="35" Width="155" Click="ButtonBack_Click"/>
-        <Button Grid.Row="3" HorizontalAlignment="Right" Margin=" 0 0 40 0" Content="Добавить товар" Name="BtnAdd" Click="BtnAdd_Click"/>
-        <Button Content="Заявки"  HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="40" Width="127" Click="ButtonRequest_Click"/>
+        <Button Grid.Row="1" Content="Вернуться ко входу" FontSize="12" HorizontalAlignment="Right"  Height="35" Width="155" Click="ButtonBack_Click"/>
+        <Button Grid.Row="3" HorizontalAlignment="Left" Margin="278,10,0,10" Content="Добавить товар" Name="BtnAdd" Click="BtnAdd_Click"/>
+        <Button Content="Заявки"  HorizontalAlignment="Center" Margin="206,0,0,0" Grid.Row="3" VerticalAlignment="Center" Height="30" Width="128" Click="ButtonRequest_Click"/>
     </Grid>
 </Window>

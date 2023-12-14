@@ -20,17 +20,17 @@
 
         </StackPanel>
 
-        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="237,35,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Артикул:" FontSize="17"  VerticalAlignment="Top" Height="30" Width="82"/>
-        <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="237,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Название:" FontSize="17" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="237,104,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Цена:" FontSize="17" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="237,175,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Описание:" FontSize="17" VerticalAlignment="Top"/>
-        <TextBlock Name="TBArticle" HorizontalAlignment="Left" FontSize="17" Margin="343,34,0,0" Grid.Row="1" VerticalAlignment="Top" Width="208" Height="31" RenderTransformOrigin="0.879,0.81" />
-        <TextBlock Name="TBProductName" HorizontalAlignment="Left"  FontSize="17" Margin="327,63,0,0" Grid.Row="1" VerticalAlignment="Top" Width="208" Height="36"/>
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="265,35,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Артикул:" FontSize="17"  VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="257,70,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Название:" FontSize="17" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="292,104,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Цена:" FontSize="17" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="250,175,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Описание:" FontSize="17" VerticalAlignment="Top"/>
+        <TextBlock Name="TBArticle" HorizontalAlignment="Left" FontSize="17" Margin="345,34,0,0" Grid.Row="1" VerticalAlignment="Top" Width="208" Height="31" RenderTransformOrigin="0.879,0.81" />
+        <TextBlock Name="TBProductName" HorizontalAlignment="Left"  FontSize="17" Margin="345,70,0,0" Grid.Row="1" VerticalAlignment="Top" Width="208" Height="30"/>
 
-        <TextBlock Name="TBPrice" HorizontalAlignment="Left" FontSize="17" Margin="291,100,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="179" Height="30"/>
-        <TextBlock Name="TBCount" HorizontalAlignment="Left" FontSize="17" Margin="357,136,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="30"/>
+        <TextBlock Name="TBPrice" HorizontalAlignment="Left" FontSize="17" Margin="345,107,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="179" Height="30"/>
+        <TextBlock Name="TBCount" HorizontalAlignment="Left" FontSize="17" Margin="345,136,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="30"/>
 
-        <TextBlock  Name="TBDescription" HorizontalAlignment="Left" FontSize="17" Margin="329,175,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="416" Height="136"/>
+        <TextBlock  Name="TBDescription" HorizontalAlignment="Left" FontSize="17" Margin="345,175,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="416" Height="136"/>
 
         <Button HorizontalAlignment="Left" Background="White"  Content="Назад" Click="BtnBack_Click" Grid.Row="0" Width="118" Margin="677,18,0,17"/>
         <Button Background="White"
@@ -45,8 +45,8 @@
         <TextBlock HorizontalAlignment="Left" FontWeight="Bold" Margin="559,33,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Модель:" FontSize="17"  VerticalAlignment="Top" Height="30" Width="82"/>
         <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="540,62,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Категория:" FontSize="17" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" FontWeight="Bold"  Margin="531,92,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Поставщик:" FontSize="17" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TBModel" HorizontalAlignment="Left" FontSize="17" Margin="641,29,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Height="30" RenderTransformOrigin="0.879,0.81" />
-        <TextBlock x:Name="TBCategory" HorizontalAlignment="Left" FontSize="17" Margin="641,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Height="31" RenderTransformOrigin="0.879,0.81" />
-        <TextBlock x:Name="TBProvider" HorizontalAlignment="Left" FontSize="17" Margin="641,89,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Height="31" RenderTransformOrigin="0.879,0.81" />
+        <TextBlock x:Name="TBModel" HorizontalAlignment="Left" FontSize="17" Margin="635,30,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Height="30" RenderTransformOrigin="0.879,0.81" />
+        <TextBlock x:Name="TBCategory" HorizontalAlignment="Left" FontSize="17" Margin="635,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Height="31" RenderTransformOrigin="0.879,0.81" />
+        <TextBlock x:Name="TBProvider" HorizontalAlignment="Left" FontSize="17" Margin="635,90,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Height="31" RenderTransformOrigin="0.879,0.81" />
     </Grid>
 </Page>

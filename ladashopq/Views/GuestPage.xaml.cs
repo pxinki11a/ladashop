@@ -1,5 +1,4 @@
-﻿using ladashopq.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,25 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
-namespace ladashopq
+namespace ladashopq.Views
 {
     /// <summary>
-    /// Логика взаимодействия для Tovar.xaml
+    /// Логика взаимодействия для GuestPage.xaml
     /// </summary>
-    public partial class Tovar : Page
+    public partial class GuestPage : Page
     {
         public TableName currentTable;
-
-        public Tovar()
+        public GuestPage()
         {
             InitializeComponent();
             Update();
         }
+
         public void Update()
         {
             var content = AppData.db.Tovars.ToList();
-            LVMain.ItemsSource = content;
+            LVGuest.ItemsSource = content;
 
             var tovars = App.autoshop.Tovars.ToList();
             switch (Sort.SelectedIndex)
@@ -63,24 +61,8 @@ namespace ladashopq
             {
                 resultbox.Text = $"Найдено {tovars.Count} товара из {amount}";
             }
-            LVMain.ItemsSource = null;
-            LVMain.ItemsSource = tovars;
-        }
-
-        private void ButtonChangeRequest_Click(object sender, RoutedEventArgs e)
-        {
-        
-        }
-
-        
-
-        private void ButtonUserRequest_Click(object sender, RoutedEventArgs e)
-        {
-            var button = (Button)sender;
-            var currentTovar = button.DataContext as Tovars;
-            NavigationService.Navigate(new Views.requsetion(currentTovar));
-
-            
+            LVGuest.ItemsSource = null;
+            LVGuest.ItemsSource = tovars;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
