@@ -8,22 +8,24 @@
         Title="Авторизация" Height="450" Width="800" Background="#D5CFE1" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Background="#D5CFE1">
         <TextBlock Text="Авторизация" TextAlignment="Center" VerticalAlignment="Top" FontSize="42" Margin="10,64,-10,0"/>
-    <StackPanel VerticalAlignment="Center"
+        <TextBlock Text="Запчасти LADA" HorizontalAlignment="Left" TextAlignment="Left" VerticalAlignment="Top" FontSize="32" Margin="10,94,-10,0"/>
+        <StackPanel VerticalAlignment="Center"
                     
                     HorizontalAlignment="Center">
 
-        <TextBlock Text="Логин" />
-        <TextBox Name="TBLogin" Width="199"/>
-        <TextBlock Text="Пароль"/>
-        <PasswordBox Name="TBPassword" Width="199"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="Логин" />
+            <TextBox Name="TBLogin" Width="199"/>
+            <TextBlock Text="Пароль"/>
+            <PasswordBox Name="TBPassword" Width="199"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Click="BtnSignIn_Click"
                         Content="Войти"/>
-            
+
                 <Button Click="BtnSignInGuest_Click"
                         Content="Войти как гость"/>
             </StackPanel>
-    </StackPanel>
+        </StackPanel>
         <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Name="AuthFrame" Navigated="AuthFrame_Navigated"/>
+        <Image  Grid.Row="0" Width="209" HorizontalAlignment="Left" Source="/Resources/logo.png" Margin="53,-13,0,295" />
     </Grid>
 </Window>
