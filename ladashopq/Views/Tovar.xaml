@@ -17,7 +17,7 @@
 
         <TextBlock HorizontalAlignment="Left"  Margin="33,10,0,0" Grid.Row="0" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-0.563,0.495"><Run Language="ru-ru" Text="Поиск:"/></TextBlock>
         <TextBox x:Name="txtSearch"  Width="229" FontSize="18" Background="White" HorizontalAlignment="Left" Margin="107,14,0,14" TextWrapping="Wrap" Grid.Row="0" Visibility="Visible" Cursor="Hand" TextChanged="TextBox_TextChanged"/>
-        <TextBlock Name="resultbox" HorizontalAlignment="Left"  Margin="517,14,0,0" Grid.Row="0" FontSize="14" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" RenderTransformOrigin="-0.563,0.495" Width="351"><Run Language="ru-ru" Text="q"/></TextBlock>
+        <TextBlock Name="resultbox" HorizontalAlignment="Left"  Margin="517,14,0,0" Grid.Row="0" FontSize="14" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" RenderTransformOrigin="-0.563,0.495" Width="351"><Run Language="ru-ru" Text="q"/></TextBlock>
 
         <ComboBox Name="Sort" Grid.Row="0" Margin="354,11,0,13" IsEditable="True" IsReadOnly="True" Text="Сортировать по" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18" FontFamily="Gabriola" Width="145" HorizontalAlignment="Left" Height="26" SelectionChanged="Sort_SelectionChanged">
 
