@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="900"
       Title="requsetionadmin">
 
-    <Grid>
+    <Grid Background="#D5CFE1">
         <Grid.RowDefinitions>
             <RowDefinition Height="1"/>
             <RowDefinition Height="*"/>
@@ -19,7 +19,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border>
-                        <Grid HorizontalAlignment="Center" Width="900">
+                        <Grid HorizontalAlignment="Center" Width="700">
                             <Border BorderBrush="#12486B" Background="#b3b2bd" Width="800" BorderThickness="2" CornerRadius="8,8,8,8">
 
                                 <StackPanel Orientation="Horizontal">
@@ -44,8 +44,8 @@
                                     <TextBlock  FontSize="14" FontWeight="DemiBold"  Width="144" Text="{Binding Users.Login}"  TextAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="28"/>
                                 </StackPanel>
                             </Border>
-                            <Button Content="Удалить" Margin="625,10,10,4" Click="ButtonDelete_Click" />
-                            <Button Content="Подробнее"  FontSize="12" Click="ButtonInfo_Click" Margin="455,10,180,4"/>
+                            <Button Content="Удалить" Margin="525,7,10,7" Click="ButtonDelete_Click" />
+                            
 
                         </Grid>
                     </Border>

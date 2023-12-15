@@ -117,6 +117,7 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="tests.cs" />
     <Compile Include="Tovars.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
